@@ -1,0 +1,11 @@
+[package]
+name = "yew_freeze_bug"
+version = "0.1.0"
+authors = ["Noah <noah@coronasoftware.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = "0.17.3"
+yew-state = { git = "https://github.com/intendednull/yew-state.git" }
