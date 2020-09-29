@@ -19,12 +19,11 @@ impl Component for Model {
     }
 
     fn view(&self) -> Html {
-        let counts = std::iter::repeat(()).map(|_| view_count()).take(5);
-        html! { for counts }
+        view_counter()
     }
 }
 
-fn view_count() -> Html {
+fn view_counter() -> Html {
     type Handle = SharedHandle<usize>;
     let view = component::view(|handle: &Handle| {
         handle.reduce(|count| *count += 1);
